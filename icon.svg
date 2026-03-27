@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a1628"/>
+      <stop offset="100%" style="stop-color:#1565C0"/>
+    </linearGradient>
+    <linearGradient id="drop" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#42A5F5"/>
+      <stop offset="100%" style="stop-color:#00B4D8"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="100" fill="url(#bg)"/>
+  <ellipse cx="256" cy="300" rx="120" ry="140" fill="url(#drop)" opacity="0.9"/>
+  <path d="M256 100 L190 220 Q180 280 256 340 Q332 280 322 220 Z" fill="url(#drop)"/>
+  <text x="256" y="330" text-anchor="middle" fill="white" font-size="80" font-weight="bold" font-family="Arial" opacity="0.3">N</text>
+  <text x="256" y="480" text-anchor="middle" fill="white" font-size="36" font-weight="bold" font-family="Arial" letter-spacing="4">NSUPURE</text>
+</svg>

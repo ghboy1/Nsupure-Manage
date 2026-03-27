@@ -1,0 +1,20 @@
+{
+  "name": "NSUPURE Water Manager",
+  "short_name": "NSUPURE",
+  "description": "Production & Sales Manager for NSUPURE Natural Mineral Water",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0a1628",
+  "theme_color": "#1565C0",
+  "orientation": "portrait-primary",
+  "lang": "en",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "productivity"]
+}
