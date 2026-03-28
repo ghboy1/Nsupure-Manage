@@ -459,7 +459,7 @@ function renderOrdersList(orders, customers) {
       </select>
     </div>
 
-    <button class="btn btn-primary" onclick="openModal('modal-order')" style="margin-bottom:14px;">
+    <button class="btn btn-primary" onclick="openModal('modal-order');setTimeout(populateCustomerDropdown,50)" style="margin-bottom:14px;">
       ➕ Place New Order
     </button>
 
@@ -559,6 +559,21 @@ function deleteCustomer(id) {
     showToast('Customer removed', 'error');
     renderOrders();
   }
+}
+
+function filterCustomerDropdown(query) {
+  const customers = DB.get('customers');
+  const sel = document.getElementById('o-customer');
+  const q = query.toLowerCase().trim();
+  const filtered = q ? customers.filter(c =>
+    c.name.toLowerCase().includes(q) || (c.phone || '').includes(q)
+  ) : customers;
+
+  sel.innerHTML = filtered.length === 0
+    ? '<option value="">No customer found</option>'
+    : filtered.map(c =>
+        `<option value="${c.id}|${c.name}|${c.phone||''}">${c.name}${c.phone ? '  📞 '+c.phone : ''}</option>`
+      ).join('');
 }
 
 function populateCustomerDropdown() {

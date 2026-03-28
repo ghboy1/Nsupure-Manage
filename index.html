@@ -230,8 +230,11 @@
         <button onclick="openModal('modal-customer');closeModal('modal-order')"
           style="float:right;background:none;border:none;color:var(--blue-light);font-size:12px;cursor:pointer;">+ Add New</button>
       </label>
-      <select class="form-select" id="o-customer" onclick="populateCustomerDropdown()">
-        <option value="">Select Customer</option>
+      <input type="text" class="form-input" id="o-cust-search" placeholder="🔍 Type to search customer..."
+        oninput="filterCustomerDropdown(this.value)" autocomplete="off">
+      <select class="form-select" id="o-customer" size="4"
+        style="margin-top:6px;height:auto;min-height:80px;border-radius:10px;">
+        <option value="">— tap search above to filter —</option>
       </select>
     </div>
     <div class="form-group">
